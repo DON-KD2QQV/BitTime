@@ -1,6 +1,6 @@
 name: binary_clock_web_app
 description: BitTime - A beautiful binary clock app from RadioOperator.net - Learn to read time in binary!
-version: 1.1.0+1
+version: 1.1.0+2
 homepage: https://radiooperator.net
 repository: https://github.com/DON-KD2QQV/binary-clock-app
 environment:
