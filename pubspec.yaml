@@ -1,0 +1,21 @@
+name: binary_clock_web_app
+description: BitTime - A beautiful binary clock app from RadioOperator.net - Learn to read time in binary!
+version: 1.1.0+1
+homepage: https://radiooperator.net
+repository: https://github.com/DON-KD2QQV/binary-clock-app
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  url_launcher: ^6.2.2
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
