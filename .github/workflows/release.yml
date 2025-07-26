@@ -31,14 +31,14 @@ jobs:
     - name: Run tests
       run: flutter test
       
-    - name: Build release APK
-      run: flutter build apk --release --no-tree-shake-icons
+    - name: Build release APK (unsigned)
+      run: flutter build apk --debug --no-tree-shake-icons
       
     - name: Create Release
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          build/app/outputs/flutter-apk/app-release.apk
+          build/app/outputs/flutter-apk/app-debug.apk
         body: |
           ## BitTime Binary Clock App Release
           
