@@ -1,4 +1,5 @@
-# binary_clock_web_app
+# BitTime - Binary Clock App for Andriod and Windows
+[![Flutter CI](https://github.com/DON-KD2QQV/BitTime/actions/workflows/flutter.yml/badge.svg)](https://github.com/DON-KD2QQV/BitTime/actions/workflows/flutter.yml)
 
 A new Flutter project.
 
