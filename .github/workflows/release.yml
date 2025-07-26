@@ -42,7 +42,6 @@ jobs:
       with:
         files: |
           build/app/outputs/flutter-apk/app-release.apk
-          build/app/outputs/bundle/release/app-release.aab
         body: |
           ## BitTime Binary Clock App Release
           
@@ -53,7 +52,7 @@ jobs:
           
           ### Installation
           - **APK**: Direct install on Android devices
-          - **AAB**: For Google Play Store submission
+          - **Play Store**: Search for "BitTime" on Google Play Store
           
           ### Links
           - [RadioOperator.net](https://radiooperator.net)
