@@ -1,0 +1,64 @@
+name: Release Build
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'zulu'
+        java-version: '17'
+        
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.24.0'
+        channel: 'stable'
+        
+    - name: Install dependencies
+      run: flutter pub get
+      
+    - name: Run tests
+      run: flutter test
+      
+    - name: Build release APK
+      run: flutter build apk --release --no-tree-shake-icons
+      
+    - name: Build release App Bundle (unsigned)
+      run: flutter build appbundle --release --no-tree-shake-icons
+      
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          build/app/outputs/flutter-apk/app-release.apk
+          build/app/outputs/bundle/release/app-release.aab
+        body: |
+          ## BitTime Binary Clock App Release
+          
+          ### What's Changed
+          - Binary clock display improvements
+          - Performance optimizations
+          - Bug fixes
+          
+          ### Installation
+          - **APK**: Direct install on Android devices
+          - **AAB**: For Google Play Store submission
+          
+          ### Links
+          - [RadioOperator.net](https://radiooperator.net)
+          - [Privacy Policy](https://github.com/DON-KD2QQV/BitTime/blob/main/PRIVACY_POLICY.md)
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
