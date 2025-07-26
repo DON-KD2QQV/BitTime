@@ -34,9 +34,6 @@ jobs:
     - name: Build release APK
       run: flutter build apk --release --no-tree-shake-icons
       
-    - name: Build release App Bundle (unsigned)
-      run: flutter build appbundle --release --no-tree-shake-icons
-      
     - name: Create Release
       uses: softprops/action-gh-release@v1
       with:
