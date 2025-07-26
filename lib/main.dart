@@ -135,7 +135,8 @@ class _BinaryClockScreenState extends State<BinaryClockScreen> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF1F2937),
                 foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               ),
             ),
           ],
@@ -157,13 +158,13 @@ class _BinaryClockScreenState extends State<BinaryClockScreen> {
         const SizedBox(width: 8),
         _buildBinaryColumn(hour % 10, 'H2'),
         const SizedBox(width: 20),
-        
+
         // Minutes
         _buildBinaryColumn(minute ~/ 10, 'M1'),
         const SizedBox(width: 8),
         _buildBinaryColumn(minute % 10, 'M2'),
         const SizedBox(width: 20),
-        
+
         // Seconds
         _buildBinaryColumn(second ~/ 10, 'S1'),
         const SizedBox(width: 8),
@@ -183,28 +184,28 @@ class _BinaryClockScreenState extends State<BinaryClockScreen> {
     return Column(
       children: [
         ...bits.map((bit) => Container(
-          width: 30,
-          height: 30,
-          margin: const EdgeInsets.all(2),
-          decoration: BoxDecoration(
-            color: bit ? Colors.green : Colors.grey[800],
-            borderRadius: BorderRadius.circular(6),
-            border: Border.all(
-              color: bit ? Colors.green[300]! : Colors.grey[600]!,
-              width: 1,
-            ),
-          ),
-          child: Center(
-            child: Text(
-              bit ? '1' : '0',
-              style: TextStyle(
-                color: bit ? Colors.black : Colors.grey[400],
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
+              width: 30,
+              height: 30,
+              margin: const EdgeInsets.all(2),
+              decoration: BoxDecoration(
+                color: bit ? Colors.green : Colors.grey[800],
+                borderRadius: BorderRadius.circular(6),
+                border: Border.all(
+                  color: bit ? Colors.green[300]! : Colors.grey[600]!,
+                  width: 1,
+                ),
               ),
-            ),
-          ),
-        )),
+              child: Center(
+                child: Text(
+                  bit ? '1' : '0',
+                  style: TextStyle(
+                    color: bit ? Colors.black : Colors.grey[400],
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+            )),
       ],
     );
   }

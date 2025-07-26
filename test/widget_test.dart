@@ -10,10 +10,10 @@ void main() {
 
     // Verify that the app builds without crashing
     expect(find.byType(MaterialApp), findsOneWidget);
-    
+
     // Look for the app bar title
     expect(find.text('Binary Clock'), findsOneWidget);
-    
+
     // Verify basic structure exists
     expect(find.byType(Scaffold), findsOneWidget);
   });
