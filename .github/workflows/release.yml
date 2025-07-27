@@ -34,10 +34,10 @@ jobs:
     - name: Run tests
       run: flutter test
       
-    - name: Build release APK
+    - name: Build release APK (unsigned for GitHub)
       run: flutter build apk --release --no-tree-shake-icons
       
-    - name: Build release App Bundle (for Play Store)
+    - name: Build release App Bundle (unsigned for GitHub)  
       run: flutter build appbundle --release --no-tree-shake-icons
       
     - name: Create Release
