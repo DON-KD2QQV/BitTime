@@ -2,6 +2,11 @@
 [![Flutter CI](https://github.com/DON-KD2QQV/BitTime/actions/workflows/flutter.yml/badge.svg)](https://github.com/DON-KD2QQV/BitTime/actions/workflows/flutter.yml)
 [![Release](https://github.com/DON-KD2QQV/BitTime/actions/workflows/release.yml/badge.svg)](https://github.com/DON-KD2QQV/BitTime/actions/workflows/release.yml)
 
+## 🧪 **HELP NEEDED: Beta Testers Wanted!** 
+**I need 12 testers to launch BitTime on Google Play Store! [Click here to help →](CALL_FOR_TESTERS.md)**
+
+---
+
 Learn to read time in binary format with this educational and fun binary clock app! BitTime displays the current time using binary digits, helping you understand binary number systems while keeping track of time.
 
 ## 🕐 What is BitTime?
