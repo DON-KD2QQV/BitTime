@@ -34,14 +34,18 @@ jobs:
     - name: Run tests
       run: flutter test
       
-    - name: Build release APK (unsigned)
-      run: flutter build apk --debug --no-tree-shake-icons
+    - name: Build release APK
+      run: flutter build apk --release --no-tree-shake-icons
+      
+    - name: Build release App Bundle (for Play Store)
+      run: flutter build appbundle --release --no-tree-shake-icons
       
     - name: Create Release
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          build/app/outputs/flutter-apk/app-debug.apk
+          build/app/outputs/flutter-apk/app-release.apk
+          build/app/outputs/bundle/release/app-release.aab
         body: |
           ## BitTime Binary Clock App Release
           
@@ -50,13 +54,18 @@ jobs:
           - Performance optimizations
           - Bug fixes
           
+          ### Downloads
+          - **APK**: `app-release.apk` - Direct install on Android devices (sideloading)
+          - **AAB**: `app-release.aab` - App Bundle for Google Play Store submission
+          
           ### Installation
-          - **APK**: Direct install on Android devices
-          - **Play Store**: Search for "BitTime" on Google Play Store
+          - **APK**: Enable "Unknown sources" in Android settings, then install APK
+          - **Play Store**: Search for "BitTime" on Google Play Store (recommended)
           
           ### Links
           - [RadioOperator.net](https://radiooperator.net)
           - [Privacy Policy](https://github.com/DON-KD2QQV/BitTime/blob/main/PRIVACY_POLICY.md)
+          - [How to Read Binary Time](https://github.com/DON-KD2QQV/BitTime#-how-to-read-binary-time)
         draft: false
         prerelease: false
       env:
