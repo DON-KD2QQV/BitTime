@@ -106,6 +106,14 @@ Contributions are welcome! Please feel free to:
 - Submit pull requests
 - Improve documentation
 
+## ☕ Support the Project
+
+If you find BitTime useful and want to support its development:
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support%20development-orange?style=for-the-badge&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/donaldbryas)
+
+Your support helps maintain and improve BitTime for the ham radio and maker communities!
+
 ## 🔗 Links
 
 - **RadioOperator.net**: [https://radiooperator.net](https://radiooperator.net)
