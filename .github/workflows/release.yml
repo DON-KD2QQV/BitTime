@@ -54,18 +54,13 @@ jobs:
           - Performance optimizations
           - Bug fixes
           
-          ### Downloads
-          - **APK**: `app-release.apk` - Direct install on Android devices (sideloading)
-          - **AAB**: `app-release.aab` - App Bundle for Google Play Store submission
-          
           ### Installation
-          - **APK**: Enable "Unknown sources" in Android settings, then install APK
-          - **Play Store**: Search for "BitTime" on Google Play Store (recommended)
+          - **APK**: Direct install on Android devices
+          - **Play Store**: Search for "BitTime" on Google Play Store
           
           ### Links
           - [RadioOperator.net](https://radiooperator.net)
           - [Privacy Policy](https://github.com/DON-KD2QQV/BitTime/blob/main/PRIVACY_POLICY.md)
-          - [How to Read Binary Time](https://github.com/DON-KD2QQV/BitTime#-how-to-read-binary-time)
         draft: false
         prerelease: false
       env:
